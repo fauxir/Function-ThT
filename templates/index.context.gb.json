@@ -1,0 +1,84 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "gb"
+  },
+  "sections": {
+    "product_carousel_qdM3y": {
+      "type": "product-carousel",
+      "disabled": false,
+      "settings": {
+        "title": "Best Sellers",
+        "collection": "best-sellers"
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
+    "collections_ddYhD": {
+      "type": "collections",
+      "disabled": false,
+      "settings": {
+      },
+      "blocks": {
+        "collection_wEk6m": {
+          "type": "collection",
+          "disabled": false,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/doorway-1.png",
+            "title": "The Casual Edit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "link": "shopify:\/\/collections\/the-casual-edit",
+            "button_text": "Shop All"
+          }
+        },
+        "collection_m3774": {
+          "type": "collection",
+          "disabled": false,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/doorway-2.png",
+            "title": "The Denim Edit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "link": "shopify:\/\/collections\/the-denim-edit",
+            "button_text": "Shop All"
+          }
+        }
+      },
+      "block_order": [
+        "collection_wEk6m",
+        "collection_m3774"
+      ]
+    },
+    "promotion_banner_EtwLG": {
+      "type": "promotion-banner",
+      "disabled": false,
+      "settings": {
+        "main_text": "Get your gifts in time for the holidays",
+        "sub_text": "Free, extended returns until January 20th",
+        "button_text": "Learn More",
+        "button_link": "shopify:\/\/pages\/contact"
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
+    "main": {
+      "disabled": true,
+      "settings": {
+      },
+      "blocks": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_YXfkyH",
+    "product_carousel_qdM3y",
+    "collections_ddYhD",
+    "promotion_banner_EtwLG"
+  ]
+}

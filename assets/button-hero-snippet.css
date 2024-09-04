@@ -1,0 +1,133 @@
+
+.custom-button-hero-wrapper {
+  display: inline-block;
+  width: fit-content;
+  margin: 32px;
+  background-color: #282B3A;
+  width: 448px;
+}
+
+.custom-button-hero--grey {
+  display: flex;
+  align-items: center;
+  padding: 0px 32px;
+  color: #333;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button-hero--white {
+  display: flex;
+  align-items: center;
+  padding: 0px 32px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button-hero--grey:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.custom-button-hero--white:hover {
+  background-color: rgba(33, 48, 78, 0.767)
+}
+
+.custom-button-hero__separator--white {
+  width: 1px;
+  height: 120px;
+  background-color: #4d4d4d;
+  margin: 0 16px;
+}
+
+.custom-button-hero__separator--grey {
+  width: 1px;
+  height: 120px;
+  background-color: #ccc;
+  margin: 0 16px;
+}
+
+.custom-button-hero__arrow {
+  width: 7px;
+  height: 13px;
+  margin-left: 16px;
+}
+
+.hero-button-text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 32px 0px;
+  margin-right: auto;
+}
+
+.custom-button-hero__text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #7e808f;
+  margin: 0;
+}
+
+.custom-button-hero__sub-text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  -webkit-text-stroke: 0.3px #000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+.button-hero-arrow-wrapper {
+  height: 120px;
+}
+
+@media (max-width: 768px) {
+  .custom-button-hero-wrapper {
+    margin: 24px;
+    max-width: 342px;
+  }
+
+  .custom-button-hero__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #7e808f;
+    margin: 0;
+  }
+  
+  .custom-button-hero__sub-text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    -webkit-text-stroke: 0.3px #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+  }
+
+  .custom-button-hero--white {
+    padding: 0px 24px;
+  }
+
+  .custom-button-hero__separator--white {
+    margin: 0 8px 0 0;
+  }
+  
+}
+
+
+@media (max-width: 395px) {
+  .custom-button-hero-wrapper {
+    margin: 24px;
+    max-width: 300px;
+  }
+
+  .custom-button-hero__separator--white {
+    height: 145px;
+  }
+}

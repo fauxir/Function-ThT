@@ -1,0 +1,24 @@
+{% comment %} 
+      Usage:
+      {% render 'product-card', product: product %} 
+{% endcomment %}
+
+{{ 'product-card.css' | asset_url | stylesheet_tag }}
+
+<div class="product-card">
+  <div class="product-card__image-container">
+    <img
+      src="{{ product.featured_image | img_url: 'master' }}"
+      alt="{{ product.title }}"
+      class="product-card__image">
+  </div>
+  <div class="product-card__info">
+    <div class="product-text-container">
+      <h3 class="product-card__title">{{ product.title }}</h3>
+      <p class="product-card__price">{{ product.price | money }}</p>
+    </div>
+    <button class="product-card__wishlist" aria-label="Add to wishlist">
+      {% render 'icon-heart' %}
+    </button>
+  </div>
+</div>

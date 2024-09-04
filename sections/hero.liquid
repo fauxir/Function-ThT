@@ -1,0 +1,57 @@
+{{ 'hero.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .hero-wrapper {
+    background-image: url('{{ section.settings.background_image | img_url: '2048x2048' }}');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<section class="hero-section">
+  <div class="hero-wrapper">
+    <div class="button-hero-container">
+      {% render 'button-hero'
+        , link: section.settings.collection.url
+        , text: section.settings.link_text
+        , sub-text: section.settings.overlay_text
+        , outline_color: 'white'
+      %}
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+  {
+    "name": "Hero Header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image"
+      }, {
+        "type": "text",
+        "id": "overlay_text",
+        "label": "Overlay Text",
+        "default": "The Winter Collection"
+      }, {
+        "type": "url",
+        "id": "link_url",
+        "label": "Link URL"
+      }, {
+        "type": "text",
+        "id": "link_text",
+        "label": "Link Text",
+        "default": "What's New"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero Header",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}

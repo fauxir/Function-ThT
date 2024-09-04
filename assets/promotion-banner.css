@@ -1,0 +1,64 @@
+.gift-banner-section {
+    background-color: #19291c;
+    padding: 48px 64px 48px 64px;
+    text-align: center;
+    height: fit-content;
+}
+
+.gift-banner-container {
+    max-width: 1144px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-text {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 300;
+    margin: 0;
+    color: #ffffff;
+}
+
+.sub-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0;
+    color: #8c948e;
+}
+
+.gift-banner-button:hover {
+    background-color: #ffffff;
+    color: #1c2b22;
+}
+
+.promotion-text-wrapper {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .main-text {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .sub-text {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        margin: 0;
+        color: #8c948e;
+    }
+
+    .gift-banner-section {
+        padding: 48px 24px 48px 24px;
+    }
+}

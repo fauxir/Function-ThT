@@ -1,0 +1,76 @@
+{{ 'footer.css' | asset_url | stylesheet_tag }}
+
+<footer class="footer">
+  <div class="footer__content">
+    {% for block in section.blocks %}
+      {% if block.settings.menu != blank %}
+        <div class="footer__column">
+          <h3 class="footer__title">{{ linklists[block.settings.menu].title }}</h3>
+          <ul class="footer__list">
+            {% for link in linklists[block.settings.menu].links %}
+              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="footer__bottom">
+    <p class="footer__copyright">{{ section.settings.copyright_text }}</p>
+    <a href="/pages/sitemap" class="footer__sitemap">Sitemap</a>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "© Function 2023"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Footer Menu",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Footer Menu"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer",
+      "category": "Collection",
+      "blocks": [
+        {
+          "type": "menu",
+          "settings": {
+            "menu": "footer"
+          }
+        },
+        {
+          "type": "menu",
+          "settings": {
+            "menu": "footer_2"
+          }
+        },
+        {
+          "type": "menu",
+          "settings": {
+            "menu": "footer_3"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

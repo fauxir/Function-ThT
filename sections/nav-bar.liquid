@@ -1,0 +1,105 @@
+{{ 'nav-bar.css' | asset_url | stylesheet_tag }}
+
+<header class="navigation-header">
+  <div class="nav-container">
+    <div class="nav-left">
+      <a href="{{ section.settings.logo_link }}" class="nav-logo">
+        <img src="{{ section.settings.logo_image | img_url: 'medium' }}" alt="{{ shop.name }}">
+      </a>
+      <span class="hero__separator"></span>
+      <nav class="nav-menu">
+        <ul class="nav-menu-list">
+          {% for link in linklists[section.settings.main_menu].links %}
+            <li>
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-right">
+      {% render 'search-box' %}
+    </div>
+    <div class="mobile-nav">
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-menu">
+        {% render 'icon-menu' %}
+        <span class="mobile-menu-text">Menu</span>
+      </button>
+      <a href="{{ section.settings.logo_link }}" class="nav-logo">
+        <img src="{{ section.settings.logo_image | img_url: 'small' }}" alt="{{ shop.name }}">
+      </a>
+      <a
+        href="/cart"
+        class="cart-icon"
+        aria-label="Cart">
+        {% render 'icon-bag' %}
+        {% if cart.item_count >= 1 %}
+          <span class="cart-count">{{ cart.item_count }}</span>
+        {% endif %}
+      </a>
+    </div>
+  </div>
+  <div
+    id="mobile-menu"
+    class="mobile-menu"
+    hidden>
+    <nav>
+      <ul>
+        {% for link in linklists[section.settings.main_menu].links %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  menuToggle.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+    this.setAttribute('aria-expanded', !expanded);
+    mobileMenu.hidden = expanded;
+  });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Navigation Header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo_image",
+        "label": "Logo Image"
+      }, {
+        "type": "url",
+        "id": "logo_link",
+        "label": "Logo Link",
+        "default": "/"
+      }, {
+        "type": "text",
+        "id": "search_placeholder",
+        "label": "Search Placeholder Text",
+        "default": "Search for 'Cashmere'"
+      }, {
+        "type": "link_list",
+        "id": "main_menu",
+        "label": "Main Menu"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Navigation Header",
+        "category": "Header"
+      }
+    ]
+  }
+{% endschema %}

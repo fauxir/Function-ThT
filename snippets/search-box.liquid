@@ -1,0 +1,24 @@
+{% comment %} 
+      Search Box Snippet
+      Accepts: 
+      - placeholder: Text for the search box placeholder 
+{% endcomment %}
+
+{{ 'search-box.css' | asset_url | stylesheet_tag }}
+
+<div class="search-box">
+  <form
+    class="search-form"
+    action="/search"
+    method="get"
+    role="search">
+    <input
+      type="text"
+      class="search-input"
+      name="q"
+      placeholder="{{ section.settings.search_placeholder }}">
+    <button type="submit" aria-label="Search">
+      {% render 'icon-search' %}
+    </button>
+  </form>
+</div>

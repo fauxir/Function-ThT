@@ -1,0 +1,24 @@
+{% comment %} 
+                                                    Main Button Snippet
+                                                    Accepts: 
+                                                    - link: URL for the button (required) 
+                                                    - text: Button text (required) 
+                                                    - outline_color: Color of the button outline (optional, default: 'grey') 
+{% endcomment %}
+
+{{ 'button-snippet.css' | asset_url | stylesheet_tag }}
+
+{% assign outline_color = outline_color | default: 'grey' %}
+
+
+<div class="custom-button-wrapper">
+  <a href="{{ link }}" class="custom-button custom-button--{{ outline_color }}">
+    <span class="custom-button__text">{{ text }}</span>
+    <span class="custom-button__separator--{{ outline_color }}"></span>
+    {% if outline_color == "grey" %}
+      <span class="custom-button__arrow">{% render 'icon-arrow-right-dark' %}</span>
+    {% else %}
+      <span class="custom-button__arrow">{% render 'icon-arrow-right-white' %}</span>
+    {% endif %}
+  </a>
+</div>

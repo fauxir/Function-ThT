@@ -1,0 +1,54 @@
+{{ 'promotion-banner.css' | asset_url | stylesheet_tag }}
+
+<section class="gift-banner-section">
+  <div class="gift-banner-container">
+    <div class="promotion-text-wrapper">
+      <p class="gift-banner-text main-text">{{ section.settings.main_text }}</p>
+      <p class="gift-banner-text sub-text">{{ section.settings.sub_text }}</p>
+    </div>
+  
+    {% render 'button'
+      , 
+ link: section.settings.button_link
+      , 
+ text: section.settings.button_text
+      , 
+ outline_color: 'white'
+    %}
+
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Gift Banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_text",
+        "label": "Main Text",
+        "default": "Get your gifts in time for the holidays"
+      }, {
+        "type": "text",
+        "id": "sub_text",
+        "label": "Sub Text",
+        "default": "Free, extended returns until January 20th"
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "Learn More"
+      }, {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Gift Banner",
+        "category": "Collection"
+      }
+    ]
+  }
+{% endschema %}

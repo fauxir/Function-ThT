@@ -1,0 +1,56 @@
+{{ 'product-carousel.css' | asset_url | stylesheet_tag }}
+
+<div class="best-sellers">
+  <div class="best-sellers__header-wrapper">
+    <div class="best-sellers__header">
+      <h2 class="best-sellers__title">{{ section.settings.title }}</h2>
+      {% render 'button'
+        , 
+ link: section.settings.collection.url
+        , 
+ text: section.settings.button_text
+        , 
+ outline_color: 'grey'
+      %}
+    </div>
+  </div>
+  <div class="best-sellers__scroll-container">
+    <div class="best-sellers__grid">
+      {% for product in section.settings.collection.products %}
+        <div class="best-sellers__product-wrapper">
+          {% render 'product-card'
+            , product: product %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Best Sellers",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "Best Sellers"
+      }, {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "label": "Collection button text",
+        "default": "Shop All"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Best Sellers",
+        "category": "Collection"
+      }
+    ]
+  }
+{% endschema %}

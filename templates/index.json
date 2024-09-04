@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "main": {
+      "type": "index-section",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "hero_YXfkyH": {
+      "type": "hero",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/AFeature.png",
+        "overlay_text": "The Winter Collection",
+        "link_url": "shopify:\/\/pages\/contact",
+        "link_text": "What's New"
+      }
+    },
+    "product_carousel_mg8eDL": {
+      "type": "product-carousel",
+      "settings": {
+        "title": "Best Sellers",
+        "collection": "best-sellers"
+      }
+    },
+    "collections_MJLiRB": {
+      "type": "collections",
+      "blocks": {
+        "collection_PNWXNW": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/doorway-1.png",
+            "title": "The Casual Edit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "link": "shopify:\/\/collections\/all",
+            "button_text": "Shop All"
+          }
+        },
+        "collection_J7WW87": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/doorway-2.png",
+            "title": "The Denim Edit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "link": "shopify:\/\/collections\/all",
+            "button_text": "Shop All"
+          }
+        }
+      },
+      "block_order": [
+        "collection_PNWXNW",
+        "collection_J7WW87"
+      ],
+      "settings": {
+      }
+    },
+    "promotion_banner_VgqCjX": {
+      "type": "promotion-banner",
+      "settings": {
+        "main_text": "Get your gifts in time for the holidays",
+        "sub_text": "Free, extended returns until January 20th",
+        "button_text": "Learn More",
+        "button_link": "shopify:\/\/products\/lazar-jacket-in-black"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_YXfkyH",
+    "product_carousel_mg8eDL",
+    "collections_MJLiRB",
+    "promotion_banner_VgqCjX"
+  ]
+}

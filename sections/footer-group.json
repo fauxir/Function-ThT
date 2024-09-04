@@ -1,0 +1,47 @@
+{
+  "name": "Footer Group",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "menu_yy44AX": {
+          "type": "menu",
+          "settings": {
+            "menu": ""
+          }
+        },
+        "menu_kCQwmJ": {
+          "type": "menu",
+          "settings": {
+            "menu": "footer"
+          }
+        },
+        "menu_e9Va6Q": {
+          "type": "menu",
+          "settings": {
+            "menu": "footer-menu-company"
+          }
+        },
+        "menu_p6mfzF": {
+          "type": "menu",
+          "settings": {
+            "menu": "footer-menu-get-help"
+          }
+        }
+      },
+      "block_order": [
+        "menu_yy44AX",
+        "menu_kCQwmJ",
+        "menu_e9Va6Q",
+        "menu_p6mfzF"
+      ],
+      "settings": {
+        "copyright_text": "© Function 2023"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
