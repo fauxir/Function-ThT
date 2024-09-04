@@ -1,6 +1,6 @@
 # Function Shopify store 
 
-This repo is a take-home task from Function to asses my Shopify skill. 
+This repo is a take-home task from Function to asses my Shopify skill. Link to the live store: https://function-tht.myshopify.com/?_ab=0&_fd=0&_sc=1
 
 ## Setup
 
